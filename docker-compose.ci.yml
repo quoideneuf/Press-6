@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .docker/ci-app/Dockerfile.ci
+    ports:
+      - "3000"
+    environment:
+      BUNDLE_PATH: /app/vendor/bundle
+    entrypoint:
+      - "tail"
+      - "-f"
+      - /dev/null
