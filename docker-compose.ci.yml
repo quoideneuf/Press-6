@@ -4,7 +4,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile.ci
+      dockerfile: ./docker/ci-app/Dockerfile.ci
     ports:
       - "3000"
     environment:
