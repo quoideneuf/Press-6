@@ -3,8 +3,8 @@ version: "3.4"
 services:
   app:
     build:
-      context: .
-      dockerfile: .docker/ci-app/Dockerfile.ci
+      context: .docker/ci-app
+      dockerfile: Dockerfile.ci
     ports:
       - "3000"
     environment:
